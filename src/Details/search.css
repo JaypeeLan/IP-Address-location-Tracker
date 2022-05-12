@@ -1,0 +1,33 @@
+#search {
+  padding: 20px 0 10% 0;
+  background-image: url(../images/pattern-bg.png);
+  height: 30vh;
+}
+
+#search h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#search div label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search div label input {
+  padding: 0.5rem;
+  width: 40%;
+  border-radius: 10px 0 0 10px;
+  border: none;
+  text-align: start;
+}
+
+#search div label input::placeholder {
+  font-size: clamp(10px, 1.2vw, 12px);
+}
+
+#search div label span {
+  padding: 0.44rem 0.6rem 0.44rem 0.6rem;
+  border-radius: 0 7px 7px 0;
+}

@@ -1,0 +1,11 @@
+.leaflet-container {
+  position: absolute !important;
+  width: 100vw;
+  max-height: 65vh;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  z-index: -1;
+  top: 19.5em;
+}

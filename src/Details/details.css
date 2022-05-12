@@ -1,0 +1,72 @@
+#searchDetails {
+  position: relative;
+  z-index: 99;
+  top: -60px;
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  gap: 6.5%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 4%;
+}
+
+#searchDetails h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: clamp(12px, 1vw, 1.2rem);
+  color: grey;
+}
+
+#searchDetails p {
+  padding-top: 16px;
+  text-align: left;
+}
+
+#searchDetails > div:nth-child(2)::before,
+#searchDetails > div:nth-child(3)::before,
+#searchDetails > div:nth-child(4)::before {
+  content: "";
+  position: absolute;
+  width: 0.5px;
+  height: 50%;
+  background-color: grey;
+  left: 25%;
+}
+
+#searchDetails > div:nth-child(3)::before {
+  left: 50%;
+}
+
+#searchDetails > div:nth-child(4)::before {
+  left: 70%;
+}
+
+@media (max-width: 700px) {
+  #searchDetails {
+    grid-template-columns: 1fr;
+    place-items: center;
+    gap: 2.5%;
+    width: 70vw;
+  }
+
+  #searchDetails > div:nth-child(2)::before,
+  #searchDetails > div:nth-child(3)::before,
+  #searchDetails > div:nth-child(4)::before {
+    visibility: hidden;
+  }
+
+  #searchDetails h2,
+  #searchDetails p {
+    text-align: center;
+  }
+
+  #searchDetails p {
+    padding-top: 3px;
+    padding-bottom: 10px;
+  }
+}
