@@ -14,6 +14,7 @@ const Details = () => {
   // To get the search value
   const searchValue = useRef();
 
+  var apiKey = "at_xjVSenAYLEtWKI39bo1kvNs1tGK5s"
   // To make the search value global
   var searchVal;
   // ------------------------------------------------------------------------------------------/-/
@@ -63,7 +64,7 @@ const Details = () => {
     searchVal = searchValue.current.value;
     axios
       .get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_2JwuzSvsG59ZovDLA4EqH6x3TMVNA&ipAddress=${searchVal}&domain=${searchVal}`
+        `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${searchVal}&domain=${searchVal}`
       )
       .then((res) => {
         const data = res.data;
@@ -80,7 +81,7 @@ const Details = () => {
   useLayoutEffect(() => {
     axios
       .get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_2JwuzSvsG59ZovDLA4EqH6x3TMVNA&ipAddress=&domain=`
+        `https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=&domain=`
       )
       .then((res) => {
         const data = res.data;
